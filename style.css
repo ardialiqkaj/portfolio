@@ -1,9 +1,14 @@
 :root {
-    --primary-color: #FFFFFF;
-    --second-color: #D2D7DF;
-    --third-color: #BDBBB0;
-    --fourth-color: #8A897C;
-    --fifth-color: #353535;
+    --primary-color: #FEFBF6;
+    --second-color: #cbdbec;
+    --third-color: #00ABB3;
+    --fourth-color: #B2B2B2;
+    --fifth-color: #3C4048;
+}
+
+@font-face {
+    font-family: Kanit;
+    src: url("./fonts/Kanit-SemiBold.ttf");
 }
 
 * {
@@ -13,8 +18,10 @@
 
 body {
     background-color: var(--fifth-color);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Kanit, Helvetica, sans-serif;
+    height: 420vh;
 }
+
 
 header ul {
     display: flex;
@@ -26,6 +33,7 @@ header ul {
 
 header li {
     list-style: none;
+    font-size: 18px;
 }
 
 .intro {
@@ -33,23 +41,42 @@ header li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vmin;
+    height: 80vh;
     color: var(--second-color);
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .intro #logo {
-    font-size: 150px;
+    margin-bottom: -20px;
+    font-size: 180px;
     font-weight: 700;
     color: var(--third-color);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: var(--second-color);
+    font-size: 18px;
+}
+
+.description .desc-title {
+    font-size: 25px;
+    color: var(--third-color);
+    padding-bottom: 10px;
 }
 
 .experience {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vmin;
-    color: var(--second-color);
+    height: 100vh;
+    color: var(--third-color);
     font-size: 20px;
 }
 
@@ -64,7 +91,7 @@ header li {
 }
 
 .experience td {
-    color: var(--third-color);
+    color: var(--second-color);
 }
 
 .experience .company-name {
@@ -73,15 +100,27 @@ header li {
 
 .skills {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    height: 90vmin;
+    height: 100vh;
     align-items: center;
 }
 
+.skills p {
+    color: var(--third-color);
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.skills .figures {
+    display: flex;
+}
+
 .skills img {
-    width: 250px;
-    height: 250px;
+    width: 15vw;
+    height: 15vw;
+    min-width: 150px;
+    min-height: 150px;
 }
 
 .skills figure {
@@ -97,8 +136,13 @@ header li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vmin;
+    height: 100vh;
     color: var(--second-color);
+}
+
+.contact p {
+    color: var(--third-color);
+    size: 25px;
 }
 
 .contact svg {

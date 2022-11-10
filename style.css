@@ -56,7 +56,7 @@ header li {
 }
 
 .intro {
-    height: 80vh;
+    height: 90vh;
     color: var(--second-color);
     font-size: 60px;
 }
@@ -119,6 +119,9 @@ header li {
 
 .skills .figures {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .skills img {

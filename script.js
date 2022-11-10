@@ -1,18 +1,18 @@
 const boxes = document.querySelectorAll(".hide");
-window.addEventListener('scroll', checkBoxes);
+window.addEventListener("scroll", checkBoxes);
 
 function checkBoxes() {
-    const triggerBottom = window.innerHeight;
+  const triggerBottom = window.visualViewport.height;
 
-    boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top;
+  boxes.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top + 100;
 
-        if(boxTop*1.2 < triggerBottom) {
-            box.classList.add("show");
-        } else {
-            box.classList.remove("show");
-        }
-    });
+    if (boxTop < triggerBottom) {
+      box.classList.add("show");
+    } else {
+      box.classList.remove("show");
+    }
+  });
 }
 
-checkBoxes()
+checkBoxes();

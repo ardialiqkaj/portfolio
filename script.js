@@ -16,3 +16,26 @@ function checkBoxes() {
 }
 
 checkBoxes();
+
+const navigation = document.querySelectorAll(".nav");
+navigation.forEach((item) => {
+  item.addEventListener("click", () => {
+    const el = document.getElementById(item.getAttribute("data-link"));
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
+  });
+});
+
+const toTop = document.querySelector(".to-top");
+window.addEventListener("scroll", moveTop);
+
+function moveTop() {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+}

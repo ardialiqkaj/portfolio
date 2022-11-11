@@ -18,19 +18,18 @@
         </ul>
     </header>
     <main>
-        <section class="intro">
+        <section class="intro" id="intro">
             <p id="logo">&lt;/&gt;</p>
             <p>ardi aliçkaj</p>
             <p>developer</p>
         </section>
         <section id="description" class="description hide">
             <p class="desc-title">a little bit about me</p>
-            <p>My name is Ardi Aliçkaj, I am 24 yrs old and I come from Gjakova. I am a CSE student, close to graduating. 
-                I've been saying that for more than a year but it's still true. Recently, I have rediscovered a passion for 
-                creating websites, one that I thought I wouldn't be able to relive. This has motivated me and given meaning 
-                to my daily schedule, where I am now trying to learn and do as much as possible, to improve myself in the 
-                Web Development area. I am a highly passionate and dedicated individual. I like to believe that I am quite 
-                positive and charismatic by nature.
+            <p>Hi there! My name is Ardi Aliçkaj. I am a 24 year old CSE student, close to graduating. 
+                Recently, I've rediscovered a hidden passion of mine for creating websites, one that I thought I no longer had. 
+                This has motivated me and given meaning to my daily schedule, to try my best on learning and improving
+                myself in the Web Development area. I am a highly passionate and dedicated individual. I like to believe 
+                that I am quite positive and charismatic by nature.
             </p>
         </section>
         <section id="experience" class="experience hide">
@@ -58,37 +57,86 @@
         <section id="skills" class="skills hide">
             <p>skills</p>
             <div class="figures">
-                <figure>
+                <figure class="html-figure">
                     <img src="./images/html.svg" alt="HTML">
                     <figcaption>html</figcaption>
+                    <aside class="exp">
+                        <p class="attribute">
+                            <p class="total"></p>
+                        </p>
+                        <p class="index">60/100</p>
+                    </aside>
                 </figure>
-                <figure>
+                <figure class="css-figure">
                     <img src="./images/css.svg" alt="CSS">
                     <figcaption>css</figcaption>
+                    <aside class="exp">
+                        <p class="attribute">
+                            <p class="total"></p>
+                        </p>
+                        <p class="index">60/100</p>
+                    </aside>
                 </figure>
-                <figure>
+                <figure class="js-figure">
                     <img src="./images/javascript.svg" alt="JavaScript">
                     <figcaption>javascript</figcaption>
+                    <aside class="exp">
+                        <p class="attribute">
+                            <p class="total"></p>
+                        </p>
+                        <p class="index">50/100</p>
+                    </aside>
                 </figure>
-                <figure>
-                    <img src="./images/sql.svg" alt="SQL">
-                    <figcaption>sql</figcaption>
+                <figure class="php-figure">
+                    <img src="./images/php.svg" alt="PHP">
+                    <figcaption>php</figcaption>
+                    <aside class="exp">
+                        <p class="attribute">
+                            <p class="total"></p>
+                        </p>
+                        <p class="index">30/100</p>
+                    </aside>
                 </figure>
             </div>
         </section>
         <section id="contact" class="contact hide">
-            <p>social and/or antisocial media</p>
+            <p>how to find me</p>
             <div class="lists">
-                <ul>
+                <ul class="images">
+                    <li><img src="./images/mail.svg"></li>
+                    <li><img src="./images/linkedin.svg"></li>
+                    <li><img src="./images/github.svg"></li>
+                </ul>
+                <ul class="types">
                     <li>ardi.aliqkaj@gmail.com</li>
                     <li>linkedin.com</li>
                     <li>github.com</li>
                 </ul>
             </div>
+            <button onclick="showHide()">drop a message</button>
         </section>
-        <a href="#" class="to-top">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M246.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 109.3 361.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160zm160 352l-160-160c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 301.3 361.4 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3z"/></svg>
-        </a>
+        <section class="contact-form">
+            <form>
+                <div class="first-last">
+                    <label for="fname">first name:</label>
+                    <label for="lname">last name:</label><br>
+                    <input type="text" id="fname" name="fname">
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <label for="email">email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="container">message:</label><br>
+                <input type="text" id="message" name="container"><br>
+                <input type="submit" id="submit" name="submit">
+              </form>
+        </section>
+        <div class="navigation-bar">
+            <a href="#intro">h.</a>
+            <a href="#description">i.</a>
+            <a href="#experience">e.</a>
+            <a href="#skills">s.</a>
+            <a href="#contact">c.</a>
+        </div>
     </main>
 </body>
 </html>

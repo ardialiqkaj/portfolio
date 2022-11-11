@@ -149,10 +149,74 @@ header a:active {
 
 .skills figure {
     text-align: center;
+    padding: 10px;
 }
 
 .skills figcaption {
     color: var(--second-color);
+}
+
+.figures .exp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.figures .exp .index {
+    font-size: 15px;
+    padding-left: 2px;
+    padding-bottom: 0;
+}
+
+/*adding the skill level to each figure*/
+
+.figures .html-figure .attribute {
+    width: 60px;
+    height: 5px;
+    background-color: var(--third-color);
+}
+
+.figures .html-figure .total {
+    width: 40px;
+    height: 5px;
+    background-color: var(--fourth-color);
+}
+
+.figures .css-figure .attribute {
+    width: 60px;
+    height: 5px;
+    background-color: var(--third-color);
+}
+
+.figures .css-figure .total {
+    width: 40px;
+    height: 5px;
+    background-color: var(--fourth-color);
+}
+
+.figures .js-figure .attribute {
+    width: 50px;
+    height: 5px;
+    background-color: var(--third-color);
+}
+
+.figures .js-figure .total {
+    width: 50px;
+    height: 5px;
+    background-color: var(--fourth-color);
+}
+
+.figures .php-figure .attribute {
+    width: 30px;
+    height: 5px;
+    background-color: var(--third-color);
+}
+
+.figures .php-figure .total {
+    width: 70px;
+    height: 5px;
+    background-color: var(--fourth-color);
 }
 
 .contact {
@@ -165,34 +229,126 @@ header a:active {
     font-size: 25px;
 }
 
+.contact .lists {
+    display: flex;
+}
+
 .contact .lists li {
     list-style: none;
 }
 
-.to-top {
-    background-color: var(--third-color);
-    color: var(--primary-color);
-    position: fixed;
-    bottom: 16px;
-    right: 32px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.contact .images img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact .images {
+    padding-right: 10px;
+}
+
+.contact .types {
     display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--second-color);
+    height: 100vh;
+}
+
+.contact-form input {
+    width: 300px;
+    height: 25px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form .first-last input {
+    width: 150px;
+}
+
+.contact-form .first-last label {
+    margin-right: 73px;
+}
+
+.contact-form #message {
+    height: 90px;
+}
+
+.contact-form #submit {
+    margin-top: 20px;
+    background-color: var(--fourth-color);
+}
+
+input[type=submit] {
+    color: var(--fifth-color);
+    font-size: 16px;
+    font-family: Kanit;
+}
+
+.contact-form #submit:hover {
+    background-color: var(--fifth-color);
+    transition: ease 0.2s;
+}
+
+input[type=submit]:hover {
+    color: var(--primary-color);
+}
+
+.navigation-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #505358;
+    position: fixed;
+    bottom: 70%;
+    right: 32px;
+    width: 40px;
+    height: 170px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-evenly;
     opacity: 0;
     pointer-events: none;
     transition: all 0.4s;
 }
 
-.to-top.active {
-    bottom: 32px;
-    pointer-events: auto;
+.navigation-bar.active {
     opacity: 1;
+    pointer-events: auto;
+    bottom: 35%;
 }
 
-.to-top svg {
-    width: 30px;
-    height: 30px;
+.navigation-bar a {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--third-color);
+}
+
+.navigation-bar a:link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.navigation-bar a:visited {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.navigation-bar a:hover {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.navigation-bar a:active {
+    text-decoration: none;
+    color: var(--primary-color);
 }

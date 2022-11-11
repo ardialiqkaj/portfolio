@@ -29,13 +29,25 @@ navigation.forEach((item) => {
   });
 });
 
-const toTop = document.querySelector(".to-top");
+const toTop = document.querySelector(".navigation-bar");
 window.addEventListener("scroll", moveTop);
 
 function moveTop() {
-  if (window.pageYOffset > 100) {
+  if (window.pageYOffset > 80) {
     toTop.classList.add("active");
   } else {
     toTop.classList.remove("active");
+  }
+}
+
+
+let message;
+function showHide() {
+  if(message==1) {
+    document.getElementsByClassName("contact-form").style.display="inline";
+    return message=0
+  } else {
+    document.getElementsByClassName("contact-form").style.display="none";
+    return message=1
   }
 }

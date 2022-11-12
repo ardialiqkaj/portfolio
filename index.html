@@ -33,26 +33,33 @@
             </p>
         </section>
         <section id="experience" class="experience hide">
-            <table>
-                <tr>
-                    <th>company</th>
-                    <th>role</th>
-                    <th>start</th>
-                    <th>finish</th>
-                </tr>
-                <tr>
-                    <td class="company-name">PECB</td>
-                    <td>online invigilator</td>
-                    <td>may 2021</td>
-                    <td>ongoing</td>
-                </tr>
-                <tr>
-                    <td class="company-name">RUDI</td>
-                    <td>IT helpdesk</td>
-                    <td>sept. 2020</td>
-                    <td>dec. 2020</td>
-                </tr>
-            </table>
+            <p class="initial-text">experience</p>
+            <div class="job pecb">
+                <ul class="job-info">
+                    <li>company - PECB</li>
+                    <li>role - online invigilator</li>
+                    <li>05-2021 - present</li>
+                </ul>
+                <ul class="role-info">
+                    <li>job description :</li>
+                    <li> - I was in charge of assisting candidates to join online exam, and also invigilating them during the exam.</li>
+                    <li> - My job includes creating, editing and maintaining documentation based on several ISO certified standards.</li>
+                    <li> - Currently in charge of several important projects in my department.</li>
+                </ul>
+            </div>
+            <div class="job rudi">
+                <ul class="job-info">
+                    <li>company - RUDI</li>
+                    <li>role - IT helpdesk</li>
+                    <li>09-2020 - 12-2020</li>
+                </ul>
+                <ul class="role-info">
+                    <li>job description :</li>
+                    <li> - I joined for a three month part time contract. My duties were to assist and resolve workers with troubleshooting technical issues.</li>
+                    <li> - My main job was to assist in cases of Windows system crashes, bugs and other issues.</li>
+                    <li> - During the end I was also involved in a project to increase network security.</li>
+                </ul>
+            </div>
         </section>
         <section id="skills" class="skills hide">
             <p>skills</p>
@@ -60,43 +67,28 @@
                 <figure class="html-figure">
                     <img src="./images/html.svg" alt="HTML">
                     <figcaption>html</figcaption>
-                    <aside class="exp">
-                        <p class="attribute">
-                            <p class="total"></p>
-                        </p>
-                        <p class="index">60/100</p>
-                    </aside>
                 </figure>
                 <figure class="css-figure">
                     <img src="./images/css.svg" alt="CSS">
                     <figcaption>css</figcaption>
-                    <aside class="exp">
-                        <p class="attribute">
-                            <p class="total"></p>
-                        </p>
-                        <p class="index">60/100</p>
-                    </aside>
                 </figure>
                 <figure class="js-figure">
                     <img src="./images/javascript.svg" alt="JavaScript">
                     <figcaption>javascript</figcaption>
-                    <aside class="exp">
-                        <p class="attribute">
-                            <p class="total"></p>
-                        </p>
-                        <p class="index">50/100</p>
-                    </aside>
                 </figure>
                 <figure class="php-figure">
                     <img src="./images/php.svg" alt="PHP">
                     <figcaption>php</figcaption>
-                    <aside class="exp">
-                        <p class="attribute">
-                            <p class="total"></p>
-                        </p>
-                        <p class="index">30/100</p>
-                    </aside>
                 </figure>
+            </div>
+        </section>
+        <section id="projects" class="projects hide">
+            <p>projects</p>
+            <div class="project-files">
+                <iframe src="https://ardialiqkaj.github.io/burgershop/"></iframe>
+                <iframe src="https://ardialiqkaj.github.io/main-project/"></iframe>
+                <iframe src="https://ardialiqkaj.github.io/calculator/"></iframe>
+                <iframe src="https://ardialiqkaj.github.io/html-repository/index.html"></iframe>
             </div>
         </section>
         <section id="contact" class="contact hide">
@@ -113,9 +105,9 @@
                     <li><a href="https://github.com/ardialiqkaj" target="_blank">github.com</a></li>
                 </ul>
             </div>
-            <button onclick="messageButton()">drop a message</button>
+            <button onclick="showTicket()"><a href="#contact-form">drop a message</a></button>
         </section>
-        <section class="contact-form remove">
+        <section id="contact-form" class="contact-form remove">
             <form>
                 <div class="first-last">
                     <label for="fname">first name:</label>
@@ -131,11 +123,12 @@
               </form>
         </section>
         <div class="navigation-bar">
-            <a href="#intro">h.</a>
-            <a href="#description">i.</a>
-            <a href="#experience">e.</a>
-            <a href="#skills">s.</a>
-            <a href="#contact">c.</a>
+            <a href="#intro" class="nav-link">h.</a>
+            <a href="#description" class="nav-link">i.</a>
+            <a href="#experience" class="nav-link">e.</a>
+            <a href="#skills" class="nav-link">s.</a>
+            <a href="#projects" class="nav-link">p.</a>
+            <a href="#contact" class="nav-link">c.</a>
         </div>
     </main>
 </body>

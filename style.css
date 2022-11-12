@@ -16,6 +16,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--fifth-color);
     font-family: Kanit, Helvetica, sans-serif;
@@ -33,6 +37,7 @@ header ul {
 header li {
     list-style: none;
     font-size: 18px;
+    cursor: pointer;
     text-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -65,7 +70,7 @@ header a:active {
     transform: translateX(0);
 }
 
-.intro, .description, .skills, .contact, .experience {
+.intro, .description, .skills, .projects, .contact, .experience {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,28 +105,48 @@ header a:active {
 }
 
 .experience {
-    flex-direction: row;
     height: 100vh;
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.experience .initial-text {
+    margin-bottom: 20px;
     color: var(--third-color);
-    font-size: 20px;
 }
 
-.experience table {
-    width: 60%;
-    height: 200px;
-    text-align: center;
+.experience li {
+    list-style: none;
 }
 
-.experience th {
-    font-size: 30px;
+.experience .job {
+    display: flex;
+    margin-bottom: 20px;
 }
 
-.experience td {
+.experience .job-info {
+    width: 30%;
     color: var(--second-color);
 }
 
-.experience .company-name {
-    color: var(--primary-color);
+.experience .role-info {
+    width: 70%;
+}
+
+.experience .role-info p {
+    margin-bottom: 10px;
+}
+
+.experience .job .role-info {
+    font-size: 18px;
+}
+
+.experience .job.pecb {
+    padding-bottom: 20px;
+    border-bottom: 4px solid;
+    border-color: var(--third-color);
 }
 
 .skills {
@@ -170,54 +195,28 @@ header a:active {
     padding-bottom: 0;
 }
 
-/*adding the skill level to each figure*/
-
-.figures .html-figure .attribute {
-    width: 60px;
-    height: 5px;
-    background-color: var(--third-color);
+.projects {
+    height: 100vh;
 }
 
-.figures .html-figure .total {
-    width: 40px;
-    height: 5px;
-    background-color: var(--fourth-color);
+.projects p {
+    font-size: 25px;
+    color: var(--third-color);
+    margin-bottom: 20px;
 }
 
-.figures .css-figure .attribute {
-    width: 60px;
-    height: 5px;
-    background-color: var(--third-color);
+.projects .project-files {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.figures .css-figure .total {
-    width: 40px;
-    height: 5px;
-    background-color: var(--fourth-color);
-}
-
-.figures .js-figure .attribute {
-    width: 50px;
-    height: 5px;
-    background-color: var(--third-color);
-}
-
-.figures .js-figure .total {
-    width: 50px;
-    height: 5px;
-    background-color: var(--fourth-color);
-}
-
-.figures .php-figure .attribute {
-    width: 30px;
-    height: 5px;
-    background-color: var(--third-color);
-}
-
-.figures .php-figure .total {
-    width: 70px;
-    height: 5px;
-    background-color: var(--fourth-color);
+.projects iframe {
+    width: 450px;
+    height: 400px;
+    margin-bottom: 30px;
+    overflow-y: hidden;
 }
 
 .contact {
@@ -295,6 +294,21 @@ header a:active {
     color: var(--fifth-color);
 }
 
+.contact button a:link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.contact button a:visited {
+    text-decoration: none;
+    color: var(--fifth-color);
+}
+
+.contact button a:hover {
+    color: var(--primary-color);
+    transition: ease 0.2s;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -356,13 +370,13 @@ input[type=submit]:hover {
     bottom: 70%;
     right: 32px;
     width: 40px;
-    height: 170px;
+    height: 210px;
     border-radius: 20px;
     align-items: center;
     justify-content: space-evenly;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s;
+    transition: ease 0.4s;
 }
 
 .navigation-bar.active {
@@ -400,6 +414,27 @@ input[type=submit]:hover {
 }
 
 @media only screen and (max-width: 600px) {
+
+    .experience .job {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .experience .job-info {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .experience .role-info {
+        width: 100%;
+    }
+
+    .experience .job .role-info li {
+        font-size: 14px;
+
+    }
+
     .navigation-bar {
         display: flex;
         flex-direction: row;

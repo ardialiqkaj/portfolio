@@ -1,23 +1,31 @@
 <?php
+session_start();
+include('dbcon.php');
+
+if(isset($_POST["submit"])) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $email = $_POST['email'];
     $container = $_POST['container'];
 
-    //create DB
+    $postData = [
+        'firstname'=>$fname,
+        'lastname'=>$lname,
+        'emailaddress'=>$email,
+        'containermessage'=>$container,
+    ];
 
-    $conn = new mysqli('localhost','root','', 'portfoliodb');
+$ref_table = "contact";
+$postRef_result = $database->getReference($ref_table)->push($postData);
 
-    if($conn->connect_error){
-        die('Connection Failed : '.$conn->connect_error);
-    }else{
-        $stmt = $conn->prepare("insert into registration(fname, lname, email, container)
-        values(?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $fname, $lname, $email, $container);
-        $stmt->execute();
-        echo "<script>alert('Thank you for sending a ticket. I will look into it and get back!')</script>";
-        $stmt->close();
-        $conn->close();
-        header( "refresh:0; url=http://localhost/portfolio-project/" );
-    }
+if($postRef_result) {
+    echo "<script>alert('Thank you for sending a ticket. I will look into it and get back!')</script>";
+    header('Location: index.html');
+} else {
+    $_SESSION['status'] = "Contact not added successfuly";
+    header('Location: index.html');
+}
+
+}
+
 ?>

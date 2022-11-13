@@ -124,15 +124,16 @@ header a:active {
 .experience .job {
     display: flex;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .experience .job-info {
-    width: 30%;
+    flex: 1;
     color: var(--second-color);
 }
 
 .experience .role-info {
-    width: 70%;
+    flex: 2;
 }
 
 .experience .role-info p {
@@ -205,18 +206,20 @@ header a:active {
     margin-bottom: 20px;
 }
 
-.projects .project-files {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.projects .project-images {
     flex-wrap: wrap;
 }
 
-.projects iframe {
-    width: 450px;
-    height: 400px;
-    margin-bottom: 30px;
-    overflow-y: hidden;
+.projects img {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.projects img:hover {
+    transform: scale(1.2);
+    transition: ease 0.2s;
 }
 
 .contact {

@@ -6,8 +6,7 @@ bin-release/
 
 # Other files and folders
 .settings/
-.portfolio-b4520-firebase-adminsdk-3m9hm-d4d45bfedf.json
-
+#portfolio-b4520-firebase-adminsdk-3m9hm-d4d45bfedf.json
 
 # Executables
 *.swf

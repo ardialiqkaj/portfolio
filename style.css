@@ -11,6 +11,11 @@
     src: url("./fonts/Kanit-SemiBold.ttf");
 }
 
+@font-face {
+    font-family: Kanit-light;
+    src: url("./fonts/Kanit-Light.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -106,14 +111,15 @@ header a:active {
 
 .experience {
     height: 100vh;
-    font-size: 24px;
+    font-size: 18px;
     color: var(--primary-color);
     margin-left: 10%;
     margin-right: 10%;
 }
 
 .experience .initial-text {
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 12px;
     color: var(--third-color);
 }
 
@@ -123,7 +129,7 @@ header a:active {
 
 .experience .job {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 100%;
 }
 
@@ -134,17 +140,30 @@ header a:active {
 
 .experience .role-info {
     flex: 2;
+    font-family: Kanit-light;
 }
 
 .experience .role-info p {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .experience .job .role-info {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .experience .job.pecb {
+    padding-bottom: 20px;
+    border-bottom: 4px solid;
+    border-color: var(--third-color);
+}
+
+.experience .job.starlabs {
+    padding-bottom: 20px;
+    border-bottom: 4px solid;
+    border-color: var(--third-color);
+}
+
+.experience .job.shd {
     padding-bottom: 20px;
     border-bottom: 4px solid;
     border-color: var(--third-color);
@@ -418,15 +437,19 @@ input[type=submit]:hover {
 
 @media only screen and (max-width: 600px) {
 
+    .experience {
+        height: 120vh;
+    }
+
     .experience .job {
         display: flex;
         flex-direction: column;
     }
 
     .experience .job-info {
-        font-size: 18px;
+        font-size: 16px;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     .experience .role-info {
@@ -434,8 +457,8 @@ input[type=submit]:hover {
     }
 
     .experience .job .role-info li {
-        font-size: 14px;
-
+        font-size: 12px;
+        font-family: Kanit-light;
     }
 
     .navigation-bar {

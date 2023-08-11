@@ -442,6 +442,23 @@ input[type=submit]:hover {
     color: var(--primary-color);
 }
 
+.delivered {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--primary-color);
+}
+
+.delivered-title {
+    font-size: 34px;
+}
+
+.delivered-message {
+    font-size: 20px;
+}
+
 @media only screen and (max-width: 600px) {
 
     .experience {
@@ -515,5 +532,10 @@ input[type=submit]:hover {
     .projects img:hover {
         transform: scale(1.1);
         transition: ease 0.2s;
+    }
+
+    .delivered {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }

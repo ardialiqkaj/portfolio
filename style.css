@@ -226,6 +226,9 @@ header a:active {
 }
 
 .projects .project-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -496,5 +499,17 @@ input[type=submit]:hover {
         border-radius: 50%;
         background-color: var(--third-color);
         font-size: 22px;
+    }
+    
+    .projects img {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+        margin: 7px;
+    }
+    
+    .projects img:hover {
+        transform: scale(1.1);
+        transition: ease 0.2s;
     }
 }

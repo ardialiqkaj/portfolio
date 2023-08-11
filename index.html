@@ -135,17 +135,29 @@
         </section>
         <section id="contact-form" class="contact-form remove">
             <form action="https://formsubmit.co/50ca743546aab6c581ac4f4548713618" method="post">
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display: none;">
+
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- Email subject -->
+                <input type="hidden" name="_subject" value="New submission from your Portfolio!">
+
                 <div class="first-last">
                     <label for="fname">first name:</label>
                     <label for="lname">last name:</label><br>
-                    <input type="text" id="fname" name="name">
-                    <input type="text" id="lname" name="lastname">
+                    <input type="text" id="fname" name="Name">
+                    <input type="text" id="lname" name="Lastname">
                 </div>
                 <label for="email">email:</label><br>
-                <input type="text" id="email" name="email"><br>
+                <input type="text" id="email" name="Email"><br>
                 <label for="container">message:</label><br>
-                <textarea rows="4" cols="50" name="container" id="message"></textarea><br>
-                <input type="submit" id="submit" name="submit">
+                <textarea rows="4" cols="50" name="Message" id="message"></textarea><br>
+                <input type="submit" id="submit" name="Submit">
+                
+                <!-- Upon Submit redirect -->
+                <input type="hidden" name="_next" value="https://ardialiqkaj.github.io/portfolio/">
               </form>
         </section>
         <div class="navigation-bar">
